@@ -32,5 +32,21 @@ function carProfit() {
         if(carMake === '' || carModel === '' || carYear === '' || carFuel === '' || carOriginalPrice === '' || carSellingPrice === '') {
             return;
         }
+
+        const tr = document.createElement('tr');
+        tr.className = 'row';
+        tr.innerHTML = 
+        `<td>${carMake}</td>
+        <td>${carModel}</td>
+        <td>${carYear}</td>
+        <td>${carFuel}</td>
+        <td>${carOriginalPrice}</td>
+        <td>${carSellingPrice}</td>
+        <td>
+        <button class="action-btn edit">Edit</button>
+        <button class="action-btn sell">Sell</button>
+        </td>
+        `
+        lists.sellingOfferList.appendChild(tr);
     }
 }
